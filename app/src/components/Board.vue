@@ -4,16 +4,12 @@
         <List />
         <List />
         <List />
-        <List />
-        <List />
-        <List />
-        <List />
-
+        <ListAdd />
     </div>
 </template>
 
 <script setup>
-import { List } from "@/components/index";
+import { List, ListAdd } from "@/components/index";
 
 </script>
 
