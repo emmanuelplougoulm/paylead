@@ -1,8 +1,26 @@
 <template>
     <div class="card-add">
-        + Add a card
+        <input v-model="newTicketName" placeholder="Ticket name" />
+        <button @click="handleAddNewTicket">+ Add a ticket</button>
     </div>
 </template>
+
+<script setup>
+import { useTicketsStore } from '@/stores/tickets';
+import { ref } from 'vue';
+
+const ticketsStore = useTicketsStore();
+const newTicketName = ref('');
+
+const handleAddNewTicket = () => {
+    if (newTicketName.value.trim() !== '') {
+        ticketsStore.addNewTicket(newTicketName.value);
+        newTicketName.value = '';
+    }
+};
+</script>
+
+
 
 
 <style scoped>
