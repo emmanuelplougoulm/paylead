@@ -8,6 +8,7 @@
         <List />
         <List />
         <List />
+
     </div>
 </template>
 
@@ -19,10 +20,10 @@ import { List } from "@/components/index";
 <style scoped>
 .board {
     background-color: grey;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem;
     display: flex;
+    align-items: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
 }

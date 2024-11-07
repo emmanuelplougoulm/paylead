@@ -1,6 +1,11 @@
 <template>
-    <div class="list-container">
-        <Card />
+    <div class="list">
+        <Card title="title" />
+        <Card title="title" />
+        <Card title="title" />
+        <Card title="title" />
+        <Card title="title" />
+        <Card title="title" />
     </div>
 </template>
 
@@ -9,12 +14,9 @@ import { Card } from "@/components/index";
 </script>
 
 <style scoped>
-.list-container {
+.list {
     background-color: darkslategrey;
-    width: 300px;
-    height: 600px;
     padding: 1rem;
     margin: 5px;
-    flex-shrink: 0
 }
 </style>
