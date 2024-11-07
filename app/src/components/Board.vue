@@ -1,6 +1,13 @@
 <template>
     <div class="board">
         <List />
+        <List />
+        <List />
+        <List />
+        <List />
+        <List />
+        <List />
+        <List />
     </div>
 </template>
 
@@ -14,6 +21,9 @@ import { List } from "@/components/index";
     background-color: grey;
     width: 100%;
     height: 100vh;
-    padding: 2rem
+    padding: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 </style>

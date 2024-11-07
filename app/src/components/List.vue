@@ -11,8 +11,10 @@ import { Card } from "@/components/index";
 <style scoped>
 .list-container {
     background-color: darkslategrey;
-    width: 400px;
+    width: 300px;
     height: 600px;
-    padding: 1rem
+    padding: 1rem;
+    margin: 5px;
+    flex-shrink: 0
 }
 </style>
