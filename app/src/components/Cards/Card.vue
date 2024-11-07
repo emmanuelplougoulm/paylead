@@ -1,17 +1,20 @@
 <template>
     <div class="card">
-        CARD
+        {{ title }}
     </div>
 </template>
 
-<!-- <script setup>
-
-</script> -->
+<script setup>
+defineProps({
+    title: String,
+})
+</script>
 
 <style scoped>
 .card {
     background-color: lightgrey;
-    width: 100%;
+    width: 300px;
     padding: .5rem;
+    margin-bottom: 10px;
 }
 </style>
