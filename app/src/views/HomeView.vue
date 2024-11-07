@@ -1,5 +1,10 @@
 <template>
   <main>
-    Paylead App
+    <Board />
   </main>
 </template>
+
+<script setup>
+import { Board } from "@/components/index"
+
+</script>
