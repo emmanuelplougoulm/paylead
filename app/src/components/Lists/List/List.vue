@@ -1,13 +1,13 @@
 <template>
     <div class="list">
-        <ListHeader :listStatus="listStatus" />
+        <ListHeader :name="name" />
         <Card title="title" />
         <Card title="title" />
         <Card title="title" />
         <Card title="title" />
         <Card title="title" />
         <Card title="title" />
-        <CardAdd :list-status="listStatus" />
+        <CardAdd :name="name" />
     </div>
 </template>
 
@@ -16,10 +16,10 @@ import { Card, CardAdd } from "@/components/index";
 import { ListHeader } from "@/components/index";
 
 const props = defineProps({
-    listStatus: String,
+    name: String,
 })
 
-const { listStatus } = props;
+const { name } = props;
 
 </script>
 

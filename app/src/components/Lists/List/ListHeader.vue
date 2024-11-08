@@ -1,16 +1,25 @@
 <template>
     <div class="list-header">
-        <div class="list-status">{{ listStatus }}</div>
-        <div>settings</div>
+        <div class="list-name">{{ name }}</div>
+        <button :onClick="() => handleDeleteList(name)">Delete</button>
     </div>
 </template>
 
 <script setup>
+import { useListsStore } from "@/stores/lists";
+
 const props = defineProps({
-    listStatus: String,
+    name: String,
 })
 
-const { listStatus } = props;
+const { name } = props;
+
+const listsStore = useListsStore();
+const { deleteList } = listsStore;
+
+const handleDeleteList = (name) => {
+    deleteList(name);
+}
 
 </script>
 
@@ -21,7 +30,7 @@ const { listStatus } = props;
     margin-bottom: 10px;
 }
 
-.list-status {
+.list-name {
     text-align: left;
 }
 </style>

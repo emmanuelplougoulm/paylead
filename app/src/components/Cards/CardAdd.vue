@@ -6,6 +6,12 @@
 </template>
 
 <script setup>
+const props = defineProps({
+    name: String,
+})
+
+const { name } = props;
+
 import { useTicketsStore } from '@/stores/tickets';
 import { ref } from 'vue';
 
@@ -14,14 +20,11 @@ const newTicketName = ref('');
 
 const handleAddNewTicket = () => {
     if (newTicketName.value.trim() !== '') {
-        ticketsStore.addNewTicket(newTicketName.value);
+        ticketsStore.addNewTicket(newTicketName.value, name);
         newTicketName.value = '';
     }
 };
 </script>
-
-
-
 
 <style scoped>
 .card-add {
