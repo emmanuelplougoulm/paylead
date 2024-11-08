@@ -1,14 +1,17 @@
 <template>
     <div class="list-header">
-        <div class="title">{{ title }}</div>
+        <div class="list-status">{{ listStatus }}</div>
         <div>settings</div>
     </div>
 </template>
 
 <script setup>
-defineProps({
-    title: String,
+const props = defineProps({
+    listStatus: String,
 })
+
+const { listStatus } = props;
+
 </script>
 
 <style scoped>
@@ -18,7 +21,7 @@ defineProps({
     margin-bottom: 10px;
 }
 
-.title {
+.list-status {
     text-align: left;
 }
 </style>

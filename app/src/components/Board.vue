@@ -1,15 +1,19 @@
 <template>
     <div class="board">
-        <List />
-        <List />
-        <List />
-        <List />
+        <List v-for="(list, index) in lists" :key="index" :listStatus="list" />
         <ListAdd />
     </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { List, ListAdd } from "@/components/index";
+import { useListsStore } from "@/stores/lists";
+
+const listsStore = useListsStore();
+const lists = computed(() => {
+    return listsStore.listNames
+})
 
 </script>
 
