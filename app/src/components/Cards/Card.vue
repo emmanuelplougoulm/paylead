@@ -1,13 +1,28 @@
 <template>
-    <div class="card">
+    <div class="card" :draggable=true @dragstart="onDragStart" @dragend="onDragEnd">
         {{ title }}
     </div>
 </template>
 
 <script setup>
-defineProps({
+import { defineProps, defineEmits } from 'vue';
+
+const props = defineProps({
     title: String,
+    id: String
 })
+
+const emit = defineEmits("");
+
+function onDragStart(event) {
+    event.dataTransfer.setData('ticketId', props.id);
+    emit('dragging', props.id)
+}
+
+function onDragEnd() {
+    emit('dragging', null)
+}
+
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
-    <div class="list">
+    <div class="list" @dragover.prevent @drop="onDrop">
         <ListHeader :listName="listName" />
-        <Card v-for="(ticket, index) in tickets" :key="index" :title="ticket.title" />
+        <Card v-for="(ticket) in tickets" :key="ticket.id" :title="ticket.title" :id="ticket.id" />
         <CardAdd :listName="listName" />
     </div>
 </template>
@@ -19,8 +19,13 @@ const { listName } = props;
 
 const ticketsStore = useTicketsStore();
 const tickets = computed(() => {
-    return ticketsStore.tickets.filter(item => item.status === listName)
+    return ticketsStore.tickets.filter(ticket => ticket.status === listName)
 })
+
+function onDrop(event) {
+    const ticketId = event.dataTransfer.getData('ticketId');
+    ticketsStore.updateTicketStatus(ticketId, listName);
+}
 </script>
 
 <style scoped>
