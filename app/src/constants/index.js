@@ -1,1 +1,1 @@
-export const DEFAULT_LISTS = ['ADMIN', 'USER', 'GUEST']
+export const DEFAULT_LISTS = ['TODO', 'PENDING', 'DONE']
