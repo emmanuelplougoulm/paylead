@@ -6,21 +6,20 @@
 </template>
 
 <script setup>
-const props = defineProps({
-    name: String,
-})
-
-const { name } = props;
-
-import { useTicketsStore } from '@/stores/tickets';
 import { ref } from 'vue';
+import { useTicketsStore } from '@/stores/tickets';
+
+const props = defineProps({
+    listName: String
+})
+const { listName } = props;
 
 const ticketsStore = useTicketsStore();
 const newTicketName = ref('');
 
 const handleAddNewTicket = () => {
     if (newTicketName.value.trim() !== '') {
-        ticketsStore.addNewTicket(newTicketName.value, name);
+        ticketsStore.addNewTicket(newTicketName.value, listName);
         newTicketName.value = '';
     }
 };

@@ -6,15 +6,17 @@ export const useTicketsStore = defineStore('tickets', () => {
     id:"",
     title:"",
     description:"",
+    status:"",
   }
 
   const tickets = ref([])
 
-  function addNewTicket(title) {
+  function addNewTicket(title,status) {
     const newTicket = {...ticketSchema}; 
 
     newTicket.id = tickets.value.length + 1;
     newTicket.title = title;
+    newTicket.status = status;
 
     tickets.value.push(newTicket)
   }

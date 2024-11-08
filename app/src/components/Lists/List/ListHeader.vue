@@ -1,7 +1,7 @@
 <template>
     <div class="list-header">
-        <div class="list-name">{{ name }}</div>
-        <button :onClick="() => handleDeleteList(name)">Delete</button>
+        <div class="list-name">{{ listName }}</div>
+        <button :onClick="() => handleDeleteList(listName)">Delete</button>
     </div>
 </template>
 
@@ -9,11 +9,10 @@
 import { useListsStore } from "@/stores/lists";
 
 const props = defineProps({
-    name: String,
+    listName: String,
 })
 
-const { name } = props;
-
+const { listName } = props;
 const listsStore = useListsStore();
 const { deleteList } = listsStore;
 

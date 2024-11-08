@@ -1,26 +1,26 @@
 <template>
     <div class="list">
-        <ListHeader :name="name" />
-        <Card title="title" />
-        <Card title="title" />
-        <Card title="title" />
-        <Card title="title" />
-        <Card title="title" />
-        <Card title="title" />
-        <CardAdd :name="name" />
+        <ListHeader :listName="listName" />
+        <Card v-for="(ticket, index) in tickets" :key="index" :title="ticket.title" />
+        <CardAdd :listName="listName" />
     </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { Card, CardAdd } from "@/components/index";
 import { ListHeader } from "@/components/index";
+import { useTicketsStore } from '@/stores/tickets';
 
 const props = defineProps({
-    name: String,
+    listName: String,
 })
+const { listName } = props;
 
-const { name } = props;
-
+const ticketsStore = useTicketsStore();
+const tickets = computed(() => {
+    return ticketsStore.tickets.filter(item => item.status === listName)
+})
 </script>
 
 <style scoped>

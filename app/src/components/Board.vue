@@ -1,6 +1,6 @@
 <template>
     <div class="board">
-        <List v-for="(name, index) in lists" :key="index" :name="name" />
+        <List v-for="(listName, index) in lists" :key="index" :listName="listName" />
         <ListAdd />
     </div>
 </template>
