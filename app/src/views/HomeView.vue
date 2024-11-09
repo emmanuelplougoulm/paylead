@@ -1,10 +1,10 @@
 <template>
   <main>
     <Board />
+    <Modal />
   </main>
 </template>
 
 <script setup>
-import { Board } from "@/components/index"
-
+import { Board, Modal } from "@/components/index";
 </script>
