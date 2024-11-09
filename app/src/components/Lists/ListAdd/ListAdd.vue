@@ -26,5 +26,6 @@ const handleAddList = () => {
   padding: 1rem;
   flex-shrink: 0;
   margin: 5px;
+  background-color: var(--tertiary-color);
 }
 </style>

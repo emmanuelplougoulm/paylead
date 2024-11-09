@@ -48,10 +48,11 @@ function updateDescription(description) {
 }
 
 .modal-content {
-  background: white;
+  background-color: var(--tertiary-color);
   padding: 20px;
   border-radius: 8px;
   max-width: 400px;
   width: 100%;
+  min-height: 500px;
 }
 </style>

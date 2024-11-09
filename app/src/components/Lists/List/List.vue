@@ -35,8 +35,9 @@ function onDrop(event) {
 
 <style scoped>
 .list {
-  background-color: darkslategrey;
+  background-color: var(--secondary-color);
   padding: 1rem;
   margin: 5px;
+  border-radius: var(--border-radius);
 }
 </style>

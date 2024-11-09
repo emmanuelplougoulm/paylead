@@ -26,6 +26,7 @@ const handleDeleteList = (name) => {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
 .list-name {

@@ -22,7 +22,7 @@ const lists = computed(() => {
 
 <style scoped>
 .board {
-  background-color: grey;
+  background-color: transparent;
   min-height: 100vh;
   padding: 2rem;
   display: flex;

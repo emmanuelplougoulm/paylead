@@ -1,6 +1,6 @@
 <template>
   <div class="card-add">
-    <input v-model="newTicketName" placeholder="Ticket name" />
+    <input v-model="newTicketName" placeholder="Type a title" />
     <button @click="handleAddNewTicket">+ Add a ticket</button>
   </div>
 </template>
@@ -27,9 +27,21 @@ const handleAddNewTicket = () => {
 
 <style scoped>
 .card-add {
-  background-color: greenyellow;
   width: 300px;
   padding: 0.5rem;
   margin-bottom: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+input {
+  color: var(--primary-color);
+}
+
+input::-webkit-input-placeholder,
+input:-moz-placeholder {
+  color: var(--primary-color);
+  opacity: 50%;
 }
 </style>

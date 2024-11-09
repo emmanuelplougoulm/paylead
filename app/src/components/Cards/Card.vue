@@ -11,7 +11,6 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue'
 import { useModalStore } from '@/stores/modal'
 
 const props = defineProps({
@@ -46,5 +45,7 @@ const handleTriggerModal = (id) => {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  border-radius: var(--border-radius);
+  color: var(--secondary-color);
 }
 </style>
