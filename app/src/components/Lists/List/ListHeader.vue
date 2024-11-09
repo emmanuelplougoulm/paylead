@@ -31,5 +31,10 @@ const handleDeleteList = (name) => {
 
 .list-name {
   text-align: left;
+  font-size: var(--list-name);
+}
+
+button {
+  font-size: var(--text-regular);
 }
 </style>

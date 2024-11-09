@@ -27,12 +27,20 @@ const handleAddNewTicket = () => {
 
 <style scoped>
 .card-add {
+  display: flex;
+  justify-content: space-between;
   width: 300px;
   padding: 0.5rem;
   margin-bottom: 20px;
   border-radius: var(--border-radius);
   background-color: var(--background-color);
   color: var(--primary-color);
+  font-size: var(--text-regular);
+}
+
+button {
+  font-size: var(--text-action);
+  text-align: right;
 }
 
 input {
