@@ -11,6 +11,7 @@ import { Board, Modal } from '@/components/index'
 
 <style>
 main {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background-image: linear-gradient(to bottom, #334eac, #081f5c);
 }
 </style>

@@ -40,4 +40,7 @@ function onDrop(event) {
   margin: 5px;
   border-radius: var(--border-radius);
 }
+.list:hover {
+  border: 0.5px solid var(--tertiary-color);
+}
 </style>

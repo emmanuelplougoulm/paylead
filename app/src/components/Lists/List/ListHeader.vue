@@ -1,7 +1,7 @@
 <template>
   <div class="list-header">
     <div class="list-name">{{ listName }}</div>
-    <button :onClick="() => handleDeleteList(listName)">Delete</button>
+    <button :onClick="() => handleDeleteList(listName)">Delete List</button>
   </div>
 </template>
 
@@ -32,9 +32,17 @@ const handleDeleteList = (name) => {
 .list-name {
   text-align: left;
   font-size: var(--list-name);
+  font-weight: 800;
 }
 
 button {
+  padding: 4px;
   font-size: var(--text-regular);
+  border-radius: var(--border-radius);
+  font-weight: 100;
+}
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 </style>

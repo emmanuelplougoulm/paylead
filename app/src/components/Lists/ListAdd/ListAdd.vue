@@ -27,5 +27,17 @@ const handleAddList = () => {
   flex-shrink: 0;
   margin: 5px;
   background-color: var(--tertiary-color);
+  border-radius: var(--border-radius);
+}
+
+button {
+  padding: 4px;
+  font-size: var(--text-regular);
+  border-radius: var(--border-radius);
+  font-weight: 100;
+}
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 </style>

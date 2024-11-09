@@ -3,7 +3,7 @@
     <div v-if="isModalOpen" class="modal-overlay" @click.self="onTriggerModal">
       <div class="modal-content">
         <h2>{{ currentTicket.title }}</h2>
-        <input
+        <textarea
           :value="currentTicket.description"
           @input="updateDescription($event.target.value)"
           placeholder="Ajouter ou modifier la description"
@@ -48,11 +48,18 @@ function updateDescription(description) {
 }
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
   background-color: var(--tertiary-color);
   padding: 20px;
   border-radius: 8px;
   max-width: 400px;
   width: 100%;
   min-height: 500px;
+}
+.modal-content textarea {
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  min-height: 300px;
 }
 </style>

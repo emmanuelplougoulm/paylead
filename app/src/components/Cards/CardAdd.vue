@@ -39,8 +39,14 @@ const handleAddNewTicket = () => {
 }
 
 button {
+  padding: 4px;
   font-size: var(--text-action);
   text-align: right;
+  font-weight: 100;
+}
+
+button:hover {
+  color: var(--secondary-color);
 }
 
 input {
