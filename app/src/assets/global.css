@@ -8,3 +8,7 @@
     --text-action: 14px;
     --text-regular: 16px;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
