@@ -6,5 +6,5 @@
 </template>
 
 <script setup>
-import { Board, Modal } from "@/components/index";
+import { Board, Modal } from '@/components/index'
 </script>

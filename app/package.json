@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write \"src/**/*.{js,vue,css,html,json,md}\""
   },
   "dependencies": {
     "pinia": "^2.1.7",
@@ -25,6 +26,7 @@
     "eslint-plugin-playwright": "^1.6.2",
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.1.0",
+    "prettier": "^3.3.3",
     "vite": "^5.3.1",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vitest": "^1.6.0"

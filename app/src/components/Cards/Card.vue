@@ -1,46 +1,50 @@
 <template>
-    <div class="card" :draggable=true @dragstart="onDragStart" @dragend="onDragEnd">
-        <div >{{ title }}</div>
-        <button @click="() => handleTriggerModal(id)">open card</button>
-    </div>
+  <div
+    class="card"
+    :draggable="true"
+    @dragstart="onDragStart"
+    @dragend="onDragEnd"
+  >
+    <div>{{ title }}</div>
+    <button @click="() => handleTriggerModal(id)">open card</button>
+  </div>
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
-import { useModalStore } from '@/stores/modal';
+import { defineProps, defineEmits } from 'vue'
+import { useModalStore } from '@/stores/modal'
 
 const props = defineProps({
-    title: String,
-    id: String
+  title: String,
+  id: String,
 })
 
-const emit = defineEmits("");
+const emit = defineEmits('')
 
 function onDragStart(event) {
-    event.dataTransfer.setData('ticketId', props.id);
-    emit('dragging', props.id)
+  event.dataTransfer.setData('ticketId', props.id)
+  emit('dragging', props.id)
 }
 
 function onDragEnd() {
-    emit('dragging', null)
+  emit('dragging', null)
 }
 
-const modalStore = useModalStore();
-const { onTriggerModal } = modalStore;
+const modalStore = useModalStore()
+const { onTriggerModal } = modalStore
 
 const handleTriggerModal = (id) => {
-    onTriggerModal(id);
+  onTriggerModal(id)
 }
-
 </script>
 
 <style scoped>
 .card {
-    background-color: lightgrey;
-    width: 300px;
-    padding: .5rem;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+  background-color: lightgrey;
+  width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 </style>
