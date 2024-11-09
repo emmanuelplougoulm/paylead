@@ -1,7 +1,7 @@
 <template>
     <div class="card" :draggable=true @dragstart="onDragStart" @dragend="onDragEnd">
         <div >{{ title }}</div>
-        <button @click="triggerModal">open card</button>
+        <button @click="() => handleTriggerModal(id)">open card</button>
     </div>
 </template>
 
@@ -26,7 +26,11 @@ function onDragEnd() {
 }
 
 const modalStore = useModalStore();
-const {triggerModal} = modalStore
+const { onTriggerModal } = modalStore;
+
+const handleTriggerModal = (id) => {
+    onTriggerModal(id);
+}
 
 </script>
 

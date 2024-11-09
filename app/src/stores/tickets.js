@@ -10,7 +10,7 @@ export const useTicketsStore = defineStore('tickets', () => {
     status:"",
   }
 
-  const tickets = ref([])
+  const tickets = ref([]);
 
   function addNewTicket(title,status) {
     const newTicket = {...ticketSchema}; 
@@ -31,6 +31,17 @@ export const useTicketsStore = defineStore('tickets', () => {
     }
 }
   
+function updateTicketDescription(id, description) {
+    const ticket = tickets.value.find(ticket => ticket.id === id);
 
-  return { tickets, addNewTicket, updateTicketStatus }
+    if (ticket) {
+        ticket.description = description;
+    }
+}
+  
+function getTicketById(id) {
+  return  tickets.value.find(ticket => ticket.id === id);
+}
+
+  return { tickets, addNewTicket, updateTicketStatus, updateTicketDescription, getTicketById }
 })
