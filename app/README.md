@@ -1,5 +1,11 @@
-# app
+# presentation
+Hi and welcome to my proposal for Paylead frontend test. 
+This test has been done on a macbook so running it on a ubuntu like distribution shouldn't be a problem as 
+they share linux OS.     
 
+Follow the steps below to make it work, make sure you have node installed in your machine though
+
+# app
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
