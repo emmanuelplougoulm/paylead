@@ -16,13 +16,12 @@
 
 <script setup>
 import { toRefs, computed } from 'vue'
-import { useModalStore } from '@/stores/modal'
-import { useTicketsStore } from '@/stores/tickets'
+import { useModalStore, useTicketStore } from '@/stores/index'
 
 const modalStore = useModalStore()
 const { isModalOpen, currentTicketId, onTriggerModal } = toRefs(modalStore)
 
-const ticketStore = useTicketsStore()
+const ticketStore = useTicketStore()
 const { getTicketById, updateTicketDescription } = ticketStore
 
 const currentTicket = computed(() => getTicketById(currentTicketId.value))

@@ -2,7 +2,7 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { v4 as uuidv4 } from 'uuid'
 
-export const useTicketsStore = defineStore('tickets', () => {
+const useTicketStore = defineStore('tickets', () => {
   const ticketSchema = {
     id: '',
     title: '',
@@ -51,3 +51,5 @@ export const useTicketsStore = defineStore('tickets', () => {
     getTicketById,
   }
 })
+
+export default useTicketStore

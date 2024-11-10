@@ -12,11 +12,11 @@
 <script setup>
 import { computed } from 'vue'
 import { List, ListAdd } from '@/components/index'
-import { useListsStore } from '@/stores/lists'
+import { useListStore } from '@/stores/index'
 
-const listsStore = useListsStore()
+const listStore = useListStore()
 const lists = computed(() => {
-  return listsStore.listNames
+  return listStore.listNames
 })
 </script>
 

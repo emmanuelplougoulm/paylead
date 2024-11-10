@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { useModalStore } from '@/stores/modal'
+import { useModalStore } from '@/stores/index'
 
 const props = defineProps({
   title: String,

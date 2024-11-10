@@ -6,15 +6,15 @@
 </template>
 
 <script setup>
-import { useListsStore } from '@/stores/lists'
+import { useListStore } from '@/stores/index'
 import { ref } from 'vue'
 
-const ListsStore = useListsStore()
+const listStore = useListStore()
 const newListName = ref('')
 
 const handleAddList = () => {
   if (newListName.value.trim() !== '') {
-    ListsStore.addList(newListName.value)
+    listStore.addList(newListName.value)
     newListName.value = ''
   }
 }

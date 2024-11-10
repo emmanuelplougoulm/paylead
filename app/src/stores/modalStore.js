@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useModalStore = defineStore('modal', () => {
+const useModalStore = defineStore('modal', () => {
   const isModalOpen = ref(false)
 
   const currentTicketId = ref('')
@@ -13,3 +13,5 @@ export const useModalStore = defineStore('modal', () => {
 
   return { isModalOpen, currentTicketId, onTriggerModal }
 })
+
+export default useModalStore

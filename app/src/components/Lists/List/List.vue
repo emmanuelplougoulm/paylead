@@ -15,21 +15,21 @@
 import { computed } from 'vue'
 import { Card, CardAdd } from '@/components/index'
 import { ListHeader } from '@/components/index'
-import { useTicketsStore } from '@/stores/tickets'
+import { useTicketStore } from '@/stores/index'
 
 const props = defineProps({
   listName: String,
 })
 const { listName } = props
 
-const ticketsStore = useTicketsStore()
+const ticketStore = useTicketStore()
 const tickets = computed(() => {
-  return ticketsStore.tickets.filter((ticket) => ticket.status === listName)
+  return ticketStore.tickets.filter((ticket) => ticket.status === listName)
 })
 
 function onDrop(event) {
   const ticketId = event.dataTransfer.getData('ticketId')
-  ticketsStore.updateTicketStatus(ticketId, listName)
+  ticketStore.updateTicketStatus(ticketId, listName)
 }
 </script>
 

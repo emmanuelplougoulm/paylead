@@ -6,15 +6,15 @@
 </template>
 
 <script setup>
-import { useListsStore } from '@/stores/lists'
+import { useListStore } from '@/stores/index'
 
 const props = defineProps({
   listName: String,
 })
 
 const { listName } = props
-const listsStore = useListsStore()
-const { deleteList } = listsStore
+const listStore = useListStore()
+const { deleteList } = listStore
 
 const handleDeleteList = (name) => {
   deleteList(name)

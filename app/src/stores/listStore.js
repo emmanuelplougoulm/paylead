@@ -2,10 +2,10 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { DEFAULT_LISTS } from '@/constants'
 
-export const useListsStore = defineStore('lists', () => {
+const useListStore = defineStore('lists', () => {
   const listNames = ref([...DEFAULT_LISTS])
 
-  function addList(name) {
+function addList(name) {
     const isFound = listNames.value.includes(name.toUpperCase())
 
     if (!isFound) {
@@ -21,3 +21,5 @@ export const useListsStore = defineStore('lists', () => {
 
   return { listNames, addList, deleteList }
 })
+
+export default useListStore;

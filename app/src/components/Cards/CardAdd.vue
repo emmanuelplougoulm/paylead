@@ -7,19 +7,19 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useTicketsStore } from '@/stores/tickets'
+import { useTicketStore } from '@/stores/index'
 
 const props = defineProps({
   listName: String,
 })
 const { listName } = props
 
-const ticketsStore = useTicketsStore()
+const ticketStore = useTicketStore()
 const newTicketName = ref('')
 
 const handleAddNewTicket = () => {
   if (newTicketName.value.trim() !== '') {
-    ticketsStore.addNewTicket(newTicketName.value, listName)
+    ticketStore.addNewTicket(newTicketName.value, listName)
     newTicketName.value = ''
   }
 }
